@@ -9,8 +9,6 @@ public class PlayerControlScript : MonoBehaviour
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     public Vector3 moveDirection = Vector3.zero;
-    public float mouseXSpeed;
-    public float mouseYSpeed;
     public CharacterController controller;
     public float runSpeed;
     public float creepSpeed;
@@ -43,8 +41,5 @@ public class PlayerControlScript : MonoBehaviour
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
-
-        controller.transform.Rotate(transform.up * mouseYSpeed * Input.GetAxis("Mouse X"));
-        Camera.main.transform.Rotate(-Vector3.right * mouseXSpeed * Input.GetAxis("Mouse Y"));
     }
 }
