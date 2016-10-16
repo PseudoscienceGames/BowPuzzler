@@ -14,7 +14,7 @@ public class BowScript : MonoBehaviour
 	{
 		if (timeTilShot > 0)
 			timeTilShot -= Time.deltaTime;
-		if (timeTilShot <= 0 && Input.GetButton("Fire1"))
+		if (timeTilShot <= 0 && Input.GetAxis("Fire1") != 0)
 		{
 			Fire();
 			timeTilShot = 0.2f;
