@@ -14,8 +14,8 @@ public class CameraControler : MonoBehaviour
 
 	void Update()
 	{
-		transform.Rotate(transform.up * mouseYSpeed * Input.GetAxis("Mouse X") * Time.deltaTime);
-		transform.FindChild("Cam").Rotate(-Vector3.right * mouseXSpeed * Input.GetAxis("Mouse Y") * Time.deltaTime);
+		transform.Rotate(transform.up * mouseYSpeed * Input.GetAxis("Mouse X"));
+		transform.FindChild("Cam").Rotate(-Vector3.right * mouseXSpeed * Input.GetAxis("Mouse Y"));
 
 
 		//if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
